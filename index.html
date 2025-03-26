@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quesos Lolita | One Page</title>
+    <style>
+        /* === RESET === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        /* === ESTILOS GENERALES === */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #fff;
+        }
+
+        /* === NAVEGACIÓN === */
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            padding: 1rem;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        /* === SECCIONES FULLSCREEN === */
+        section {
+            height: 100vh;
+            padding: 6rem 1rem 2rem;
+            scroll-snap-align: start;
+        }
+
+        /* === CAROUSEL PRODUCTOS === */
+        .products-reel {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 2rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .product-card {
+            min-width: 100vw;
+            padding: 2rem;
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .product-image {
+            height: 50vh;
+            background: #f5f5f5;
+            margin-bottom: 1rem;
+        }
+
+        .show-more {
+            background: none;
+            border: none;
+            color: #e67e22;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        /* === CORRECCIÓN PARA DESCRIPCIONES === */
+        .full-description {
+            display: none;
+            margin-top: 1rem;
+        }
+
+        /* === FORMULARIO CONTACTO === */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+        }
+
+        /* === ESTILOS PARA MISIÓN/VISIÓN === */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+
+                /* === REDES SOCIALES === */
+                .social-links {
+            position: fixed;
+            bottom: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        /* === WHATSAPP FLOAT === */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #25D366;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVEGACIÓN -->
+    <nav class="nav">
+        <a href="#home">Inicio</a>
+        <a href="#mision-vision">Nosotros</a>
+        <a href="#quesos">Quesos</a>
+        <a href="#jamones">Jamones</a>
+        <a href="#vinos">Vinos</a>
+        <a href="#delicatessen">Delicatessen</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- SECCIÓN INICIO -->
+    <section id="home" style="background: #f8f9fa;">
+        <h1>Quesos Lolita</h1>
+        <p>Lorem ipsum dolor sit amet consectetur</p>
+    </section>
+
+    <!-- MISIÓN Y VISIÓN -->
+    <section id="mision-vision" style="background: #fff5e6;">
+        <div class="two-column">
+            <div class="mission">
+                <h2>Misión</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="vision">
+                <h2>Visión</h2>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN QUESOS (CAROUSEL) -->
+    <section id="quesos">
+        <div class="products-reel">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <h2>Queso Añejo</h2>
+                <p>Descripción breve... <button class="show-more">Ver más</button></p>
+                <div class="full-description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                </div>
+                <p class="price">$890 MXN</p>
+            </div>
+
+                        <!-- Producto 2 -->
+                        <div class="product-card">
+                            <div class="product-image"></div>
+                            <h2>Queso Añejo 2</h2>
+                            <p>Descripción breve... <button class="show-more">Ver más</button></p>
+                            <div class="full-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                            </div>
+                            <p class="price">$890 MXN</p>
+                        </div>
+
+                                                <!-- Producto 3 -->
+                                                <div class="product-card">
+                                                    <div class="product-image"></div>
+                                                    <h2>Queso Añejo 3</h2>
+                                                    <p>Descripción breve... <button class="show-more">Ver más</button></p>
+                                                    <div class="full-description">
+                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                                                    </div>
+                                                    <p class="price">$890 MXN</p>
+                                                </div>
+
+                                                                                                <!-- Producto 4 -->
+                                                                                                <div class="product-card">
+                                                                                                    <div class="product-image"></div>
+                                                                                                    <h2>Queso Añejo 4</h2>
+                                                                                                    <p>Descripción breve... <button class="show-more">Ver más</button></p>
+                                                                                                    <div class="full-description">
+                                                                                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.
+                                                                                                    </div>
+                                                                                                    <p class="price">$890 MXN</p>
+                                                                                                </div>
+        </div>
+    </section>
+
+    <!-- Jamones -->
+<section id="jamones">
+    <div class="products-reel">
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <div class="product-image"></div>
+            <h2>Jamón Ibérico</h2>
+            <p>Curabitur pretium tincidunt lacus... <button class="show-more">Ver más</button></p>
+            <div class="full-description">
+                <p>Denunciante victory letal combinación. Operación kilo metro dólar.</p>
+                <p class="price">$1,499 MXN</p>
+            </div>
+        </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h2>Jamón Ibérico 2</h2>
+                    <p>Curabitur pretium tincidunt lacus... <button class="show-more">Ver más</button></p>
+                    <div class="full-description">
+                        <p>Denunciante victory letal combinación. Operación kilo metro dólar.</p>
+                        <p class="price">$1,499 MXN</p>
+                    </div>
+                </div>
+
+                        <!-- Producto 3 -->
+        <div class="product-card">
+            <div class="product-image"></div>
+            <h2>Jamón Ibérico 3</h2>
+            <p>Curabitur pretium tincidunt lacus... <button class="show-more">Ver más</button></p>
+            <div class="full-description">
+                <p>Denunciante victory letal combinación. Operación kilo metro dólar.</p>
+                <p class="price">$1,499 MXN</p>
+            </div>
+        </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h2>Jamón Ibérico 4</h2>
+                    <p>Curabitur pretium tincidunt lacus... <button class="show-more">Ver más</button></p>
+                    <div class="full-description">
+                        <p>Denunciante victory letal combinación. Operación kilo metro dólar.</p>
+                        <p class="price">$1,499 MXN</p>
+                    </div>
+                </div>
+    </div>
+</section>
+
+    <!-- SECCIÓN VINOS (CAROUSEL) -->
+    <section id="vinos" style="background: #f8f9fa;">
+        <div class="products-reel">
+<!-- Vino 1 - Cabernet Sauvignon -->
+<div class="product-card">
+    <div class="product-image"></div>
+    <h2>Cabernet Sauvignon Reserve</h2>
+    <p>Lorem ipsum dolor sit amet... <button class="show-more">Ver más</button></p>
+    <div class="full-description">
+        <p>Consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        <p class="price">$850 MXN</p>
+    </div>
+</div>
+
+<!-- Vino 2 - Malbec -->
+<div class="product-card">
+    <div class="product-image"></div>
+    <h2>Malbec Gran Reserva</h2>
+    <p>Duis aute irure dolor in... <button class="show-more">Ver más</button></p>
+    <div class="full-description">
+        <p>Reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        <p class="price">$720 MXN</p>
+    </div>
+</div>
+
+<!-- Vino 3 - Pinot Noir -->
+<div class="product-card">
+    <div class="product-image"></div>
+    <h2>Pinot Noir Barrel</h2>
+    <p>Sunt in culpa qui officia... <button class="show-more">Ver más</button></p>
+    <div class="full-description">
+        <p>Deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+        <p class="price">$920 MXN</p>
+    </div>
+</div>
+
+<!-- Vino 4 - Syrah -->
+<div class="product-card">
+    <div class="product-image"></div>
+    <h2>Syrah Especiado</h2>
+    <p>Nemo enim ipsam voluptatem... <button class="show-more">Ver más</button></p>
+    <div class="full-description">
+        <p>Quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p class="price">$680 MXN</p>
+    </div>
+</div>
+        </div>
+    </section>
+
+    <!-- Delicatessen -->
+    <section id="delicatessen" style="background: #f8f9fa;">
+        <div class="products-reel">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <h2>Tapenade de Aceitunas</h2>
+                <p>Nulla consequat massa quis enim... <button class="show-more">Ver más</button></p>
+                <div class="full-description">
+                    <p>Donec pede justo, fringilla vel aliquet nec.</p>
+                    <p class="price">$320 MXN</p>
+                </div>
+            </div>
+    
+                    <!-- Producto 2 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h2>Tapenade de Aceitunas 2</h2>
+                        <p>Nulla consequat massa quis enim... <button class="show-more">Ver más</button></p>
+                        <div class="full-description">
+                            <p>Donec pede justo, fringilla vel aliquet nec.</p>
+                            <p class="price">$320 MXN</p>
+                        </div>
+                    </div>
+    
+                            <!-- Producto 3 -->
+            <div class="product-card">
+                <div class="product-image"></div>
+                <h2>Tapenade de Aceitunas 3</h2>
+                <p>Nulla consequat massa quis enim... <button class="show-more">Ver más</button></p>
+                <div class="full-description">
+                    <p>Donec pede justo, fringilla vel aliquet nec.</p>
+                    <p class="price">$320 MXN</p>
+                </div>
+            </div>
+    
+                    <!-- Producto 4 -->
+                    <div class="product-card">
+                        <div class="product-image"></div>
+                        <h2>Tapenade de Aceitunas 4</h2>
+                        <p>Nulla consequat massa quis enim... <button class="show-more">Ver más</button></p>
+                        <div class="full-description">
+                            <p>Donec pede justo, fringilla vel aliquet nec.</p>
+                            <p class="price">$320 MXN</p>
+                        </div>
+                    </div>
+        </div>
+    </section>
+
+
+
+    <!-- FORMULARIO CONTACTO -->
+    <section id="contacto">
+        <form class="contact-form">
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+            <!-- REDES SOCIALES -->
+            <div class="social-links">
+                <a href="#"><img src="facebook-icon.svg" alt="Facebook"></a>
+                <a href="#"><img src="instagram-icon.svg" alt="Instagram"></a>
+                <a href="#"><img src="whatsapp-icon.svg" alt="WhatsApp"></a>
+            </div>
+        
+            <!-- BOTÓN WHATSAPP -->
+            <a href="https://wa.me/528661399942" class="whatsapp-float">
+                <img src="whatsapp-icon.svg" alt="WhatsApp" width="30">
+            </a>
+
+    <script>
+        // TOGGLE VER MÁS (VERSIÓN CORREGIDA)
+        document.querySelectorAll('.show-more').forEach(button => {
+            button.addEventListener('click', () => {
+                const description = button.closest('.product-card').querySelector('.full-description');
+                description.style.display = description.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+
+        // SCROLL SUAVE
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
